@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bialei.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-01-18T09:18:33.166Z</updated>
+    <title>毕阿磊的BLOG</title>
+    <updated>2021-01-18T09:20:03.642Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bialei.github.io"/>
     <link rel="self" href="https://bialei.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://bialei.github.io/images/avatar.png</logo>
     <icon>https://bialei.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, 毕阿磊的BLOG</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://bialei.github.io/post/hello-gridea/</id>
