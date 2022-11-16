@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【转载】Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具 | 毕阿磊的主页</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://bialei.github.io/favicon.ico?v=1668611079483">
+<link rel="stylesheet" href="https://bialei.github.io/styles/main.css">
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="作者：契卡
+最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结..." />
+    <meta name="keywords" content="Gridea" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bialei.github.io">
+        <img src="https://bialei.github.io/images/avatar.png?v=1668611079483" class="site-logo">
+        <h1 class="site-title">毕阿磊的主页</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://bialei.github.io/tags" class="site-nav">
+            测试
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://bialei.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【转载】Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具</h2>
+            <div class="post-date">2022-03-27</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="作者契卡">作者：契卡</h1>
+<p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
+<h2 id="本地软件安装">本地软件安装</h2>
+<h1 id="git-安装">Git 安装</h1>
+<p>Gridea 的同步功能依赖本地 Git 客户端，所以我们需要先安装 Git。 Git官网下载平台对应的安装程序。安装没有特别的要求，一路下一步即可。</p>
+<h1 id="gridea-安装">Gridea 安装</h1>
+<p>Gridea官网(gridea.dev)下载对应平台的安装程序进行安装。</p>
+<h2 id="初始配置">初始配置</h2>
+<h1 id="github-pages-创建">GitHub Pages 创建</h1>
+<h1 id="仓库创建">仓库创建</h1>
+<p>首先，需要创建一个仓库，建议仓库为 http://username.github.io。根据官方文档， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 yym0924，所以仓库名就是http://yym0924.github.io。不过我创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。</p>
+<p>基本设置<br>
+开通 GitHub Pages<br>
+这里也说明下手动启用 GitHub Pages 的方式。<br>
+<img src="https://pic2.zhimg.com/80/v2-5a100d2a9d1dc4ff2772816513f2bcd1_720w.jpg" alt="" loading="lazy"></p>
+<p>打开仓库的 Settings<br>
+<img src="https://pic3.zhimg.com/80/v2-cd0c03f3a17fa069860628a69cf685d2_720w.jpg" alt="" loading="lazy"></p>
+<p>找到 GitHub Pages 设置的地方 点击 Choose a theme 随意选择一个主题。因为后续我们使用 Gridea 设置主题，这边选择主题只是为了开启 GitHub Pages 可访问类型。</p>
+<p>创建新 token<br>
+Gridea 管理 GitHub Pages 需要 token。登录 GitHub 后点击这里 创建一个新的 token。<br>
+<img src="https://pic2.zhimg.com/80/v2-8f670c3e42766c528d61b5644863bb15_720w.jpg" alt="" loading="lazy"></p>
+<p>勾选上 repo 相关权限即可。<br>
+<img src="https://pic3.zhimg.com/80/v2-a2e0c94166b0748b5c45915f82823486_720w.jpg" alt="" loading="lazy"></p>
+<p>请把新建的 token 复制一个地方保存起来，因为关闭这个网页后你就再也看不到它了。</p>
+<h1 id="gridea-初始配置">Gridea 初始配置</h1>
+<figure data-type="image" tabindex="1"><img src="https://pic4.zhimg.com/80/v2-0d949c6f25edd05184dad384f4b95a9f_720w.jpg" alt="" loading="lazy"></figure>
+<p>做好基本设置并保存。这步设置好后就可以开始使用。你可以点击客户端左下角的预览按钮来查看本地渲染效果，或者点击同步进行博客最新内容的部署。</p>
+<p>开启文章评论<br>
+Gridea 支持 Gitalk(https://zhuanlan.zhihu.com/p/71681116/gitalk/gitalk)和 Disqus 两种评论系统，这里我使用 Gitalk 评论系统。</p>
+<p>Gitalk 是一个基于 GitHub Issue 和 Preact 开发的评论插件。<br>
+首先你需要有一个 GitHub OAuth Applicatio ，点击这里(https://link.zhihu.com/?target=https%3A//github.com/settings/applications/new)创建。<br>
+<img src="https://pic3.zhimg.com/80/v2-a1b9f89f2315dd658618575760a4af2a_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic1.zhimg.com/80/v2-48f38ade5d85238c131f9e39b70c5e2c_720w.jpg" alt="" loading="lazy"></p>
+<p>创建完成后可将 Client ID 和 Client Secret 复制保存到本地。<br>
+<img src="https://pic3.zhimg.com/80/v2-ca23eecd67cc0d4e314e79ed7eda6a8a_720w.jpg" alt="" loading="lazy"></p>
+<p>设置、保存并同步后评论模块就可用了。<br>
+<img src="https://pic4.zhimg.com/80/v2-9173fb2312681f4fa9b4092f24eb97db_720w.jpg" alt="" loading="lazy"></p>
+<p>首次使用时可能出现上图情况，使用 GitHub 登录一次即可。</p>
+<h1 id="favicon-和头像设置">FAVICON 和头像设置</h1>
+<figure data-type="image" tabindex="2"><img src="https://pic3.zhimg.com/80/v2-f259bbb49e345b4006ea6b45750037c2_720w.jpg" alt="" loading="lazy"></figure>
+<p>FAVICON 就是网页标题左侧的小图标<br>
+<img src="https://pic2.zhimg.com/80/v2-44ee528d75936f6fc4069f927385e395_720w.jpg" alt="" loading="lazy"></p>
+<p>头像</p>
+<p>其实这两个不属于初始设置，但是默认使用的是 Gridea 的图标，在你自己的博客里还是很违和的。<br>
+<img src="https://pic4.zhimg.com/80/v2-e6bad64b93907820631fddb410f0176b_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic2.zhimg.com/80/v2-5214370eb1cfccae7a16d51161c8f8c5_720w.jpg" alt="" loading="lazy"></p>
+<h1 id="主题设置">主题设置</h1>
+<figure data-type="image" tabindex="3"><img src="https://pic3.zhimg.com/80/v2-eadbd0870afb9329d80a6fd221582a06_720w.jpg" alt="" loading="lazy"></figure>
+<p>基础设置<br>
+<img src="https://pic2.zhimg.com/80/v2-ad023a5557fd02ce5f54bf5aa873be45_720w.jpg" alt="" loading="lazy"></p>
+<p>自定义设置，自由度很大，这里大部分人设置下想要公开的社交网站主页即可。设置后会小图标的形式显示在网页左下角。</p>
+<p>菜单设置<br>
+我搭建博客的时候遇到菜单里的关于选项链接是 /about/，并不能链接自带关于文章。所以需要进行修改为 /post/about/，你也可以把关注选项链接到其他自己新建的文章。<br>
+<img src="https://pic1.zhimg.com/80/v2-6e9a331027f20c5adb919c2b4880d270_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" alt="" loading="lazy"></p>
+<p>点击对应菜单名称即可进入设置</p>
+<h2 id="维护-github-pages">维护 GitHub Pages</h2>
+<h1 id="设置标签">设置标签</h1>
+<p>标签并非必须，但是对于管理和访问而言都能提高效率。<br>
+<img src="https://pic3.zhimg.com/80/v2-7aaecc08f4a1b91e1e5a639cdcf27f7a_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" alt="" loading="lazy"></p>
+<h1 id="新建文章">新建文章</h1>
+<p><img src="https://pic4.zhimg.com/80/v2-de467be4d86964983256aef7cf0c8fa3_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic2.zhimg.com/80/v2-6f878908d5fd62fda9d14a6130b0d399_720w.jpg" alt="" loading="lazy"></p>
+<p>在文章管理界面点击新建文章。GitHub Pages 使用 Markdown 编写文章，同时 Gridea 的文章编辑器提供了一些基本样式，点击按钮既可以添加对应标记，方便初学者使用。不过这里还是建议大家抽空学习一下 Markdown(https://link.zhihu.com/?target=https%3A//fehey.com/post/markdown-yu-fa-jian-dan-jiao-cheng)，很简单。</p>
+<p>Markdown 语法简单教程 | 海岛心hey<br>
+​fehey.com/post/markdown-yu-fa-jian-dan-jiao-cheng</p>
+<p>编辑区的右侧可以设置 URL、标签、创建时间、封面图和列表中隐藏。</p>
+<p>这篇文章的 URL 为 gridea-shang-shou-jiao-cheng，那么他的文章完整链接就是</p>
+<p>https://yym0924.github.io/post/gridea-shang-shou-jiao-cheng/<br>
+标签可以选择已有的标签，如果需要新标签请先回到主界面添加，再在文章编辑界面选择。</p>
+<p>创建时间会自动生成，也可以修改。</p>
+<p>封面图会显示在首页和其他文章列表（可设置隐藏）。</p>
+<p>列表中隐藏可以用于暂未编辑好的文章，或者不希望它显示于各种列表中而只能通过链接访问，比如关于页面。</p>
+<p>文章列表默认会显示摘要，在文章头部插入 ，在其上方写摘要的内容即可。<br>
+<img src="https://pic2.zhimg.com/80/v2-c6229be7d193bc7023a51c7b3ceaae05_720w.jpg" alt="" loading="lazy"><br>
+<img src="https://pic1.zhimg.com/80/v2-ce7c02e3c4143fb469c3877c482603f0_720w.jpg" alt="" loading="lazy"></p>
+<h1 id="预览与同步">预览与同步</h1>
+<figure data-type="image" tabindex="4"><img src="https://pic3.zhimg.com/80/v2-4b1e2713de15e3aa0b3d72aa57f54d2a_720w.jpg" alt="" loading="lazy"></figure>
+<p>所有的设置和内容更新要在服务器端生效都需要在保存后点击客户端左下角的同步。 为了保证不出问题，也可以同步前在本地进行预览。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://bialei.github.io/tag/TpAn15eAS/" class="tag">
+                    Gridea
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bialei.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b45b1346f0ea2551604b',
+        clientSecret: 'a975011e30acd9b37669f8dcb4313905bca1d4de',
+        repo: 'bialei.github.io',
+        owner: 'bialei',
+        admin: ['bialei'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

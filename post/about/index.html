@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>关于 | 毕阿磊的主页</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://bialei.github.io/favicon.ico?v=1668611079483">
+<link rel="stylesheet" href="https://bialei.github.io/styles/main.css">
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+hello! 欢迎来到我的小站呀，很高兴遇见你！🤝
+本人从事发动机标定工作，部分教程适用于有一定基础的标定工程师。
+你可能在这里看到EXCEL VBA、Origin绘图、Minitab、Matlan、CANape。
+推荐按标签分类搜索噢..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bialei.github.io">
+        <img src="https://bialei.github.io/images/avatar.png?v=1668611079483" class="site-logo">
+        <h1 class="site-title">毕阿磊的主页</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://bialei.github.io/tags" class="site-nav">
+            测试
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://bialei.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">关于</h2>
+            <div class="post-date">2019-01-25</div>
+            
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>hello! 欢迎来到我的小站呀，很高兴遇见你！🤝<br>
+本人从事发动机标定工作，部分教程适用于有一定基础的标定工程师。<br>
+你可能在这里看到EXCEL VBA、Origin绘图、Minitab、Matlan、CANape。<br>
+推荐按标签分类搜索噢！</p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<pre><code>    基于Gridea本地Blog制作，挂载到Github，文章有教程，有兴趣欢迎加入！
+</code></pre>
+
+            </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b45b1346f0ea2551604b',
+        clientSecret: 'a975011e30acd9b37669f8dcb4313905bca1d4de',
+        repo: 'bialei.github.io',
+        owner: 'bialei',
+        admin: ['bialei'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
